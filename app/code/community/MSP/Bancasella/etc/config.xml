@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<modules>
+		<MSP_Bancasella>
+			<version>1.0.4</version>
+		</MSP_Bancasella>
+	</modules>
+	
+	<global>
+		<models>
+			<msp_bancasella>
+				<class>MSP_Bancasella_Model</class>
+			</msp_bancasella>
+        </models>
+		
+		<helpers>
+			<msp_bancasella>
+				<class>MSP_Bancasella_Helper</class>
+			</msp_bancasella>
+        </helpers>
+        
+        <blocks>
+			<msp_bancasella>
+				<class>MSP_Bancasella_Block</class>
+			</msp_bancasella>
+        </blocks>
+	</global>
+	
+	<frontend>
+		<routers>
+			<msp_bancasella>
+				<use>standard</use>
+				<args>
+					<module>MSP_Bancasella</module>
+					<frontName>msp_bancasella</frontName>
+				</args>
+			</msp_bancasella>
+		</routers>
+
+		<layout>
+			<updates>
+				<msp_bancasella>
+					<file>msp_bancasella.xml</file>
+				</msp_bancasella>
+			</updates>
+		</layout>
+		
+		<translate>
+			<modules>
+				<msp_bancasella>
+					<files>
+						<default>MSP_Bancasella.csv</default>
+					</files>
+				</msp_bancasella>
+			</modules>
+		</translate>
+	</frontend>
+	
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<msp_bancasella translate="title" module="msp_bancasella">
+											<title>MSP BancaSella</title>
+											<sort_order>1000</sort_order>
+										</msp_bancasella>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<msp_bancasella>
+					<file>msp_bancasella.xml</file>
+				</msp_bancasella>
+			</updates>
+		</layout>
+		<translate>
+			<modules>
+				<msp_bancasella>
+					<files>
+						<default>MSP_Bancasella.csv</default>
+					</files>
+				</msp_bancasella>
+			</modules>
+		</translate>
+    </adminhtml>
+	
+	<default>
+		<msp_bancasella>
+			<account>
+				<test-mode>1</test-mode>
+				<language>1</language>
+				<order-prefix>MAGE</order-prefix>
+				<merchant>GESPAYXXXXX</merchant>
+				<login>12345</login>
+				<password>MySecretPassword</password>
+				<currency-code>242</currency-code>
+				<auto-invoice>no</auto-invoice>
+			</account>
+			
+			<fields>
+				<buyer-name>0</buyer-name>
+				<buyer-email>0</buyer-email>
+				<language>0</language>
+			</fields>
+		</msp_bancasella>
+		
+		<payment>
+			<msp_bancasella_gateway>
+				<active>0</active>
+				<model>msp_bancasella/gateway</model>
+				<order_status>pending</order_status>
+				<title>Bancasella GestPay</title>
+				<payment_action>authorize</payment_action>
+				<allowspecific>0</allowspecific>
+				<sort_order>10</sort_order>
+				<specificcountry>IT</specificcountry>
+			</msp_bancasella_gateway>
+		</payment>
+	</default>
+</config>

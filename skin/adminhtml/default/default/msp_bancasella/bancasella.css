@@ -1,0 +1,54 @@
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ 
+.msp-bancasella-payment-notice {
+    background: url("logo.png") no-repeat scroll 15px center #EAF0EE;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+    padding: 10px 5px 5px 115px;
+}
+
+ul.tabs a.msp-bancasella-section, ul.tabs a.msp-bancasella-section:hover {
+    background: url("../images/tabs_span_bg.gif") repeat-x scroll 0 100% transparent;
+    border-bottom: medium none;
+    padding: 0.2em 0.5em 0.28em 1.5em;
+}
+ul.tabs a.msp-bancasella-section span, ul.tabs a.msp-bancasella-section:hover span {
+    background: url("bancasella_section.png") no-repeat scroll 0 0 transparent;
+    height: 0;
+    overflow: hidden;
+    padding: 18px 0 0;
+    width: 107px;
+}
+
+ul.tabs a.msp-bancasella-section:hover {
+	background-color: #d8e6e6;
+}
+ul.tabs a.msp-bancasella-section.active, ul.tabs a.msp-bancasella-section.active:hover {
+	background-color: #fff;
+}
+
+.msp-bancasella-warning {
+	border: 1px solid #cc0000;
+	background: #dcb0b0;
+    margin-bottom: 10px;
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+}
+

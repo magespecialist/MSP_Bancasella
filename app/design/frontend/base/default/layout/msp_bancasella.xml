@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+	<msp_bancasella_gateway_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+        <reference name="content">
+        	<block type="msp_bancasella/gateway" name="msp_bancasella.gateway" template="msp_bancasella/gateway.phtml" />
+        </reference>
+    </msp_bancasella_gateway_index>
+    
+    <msp_bancasella_gateway_success>
+		<reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="checkout/onepage_success" name="checkout.success" template="checkout/success.phtml"/>
+        </reference>
+    </msp_bancasella_gateway_success>
+    
+    <msp_bancasella_gateway_failure>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="checkout/onepage_failure" name="checkout.failure" template="checkout/onepage/failure.phtml"/>
+        </reference>
+    </msp_bancasella_gateway_failure>
+</layout>

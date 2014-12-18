@@ -1,0 +1,33 @@
+<?php
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<div class="msp-bancasella-payment-notice">
+    <h4><?php echo $this->__('Remember to correctly configure your BancaSella backend panel while using in production.')?></h4>
+    <p>
+    	<ul>
+    		<li><?php echo $this->__("Log in your backend at <a target=\"_blank\" href=\"%s\">%s</a>", 'https://ecomm.sella.it/gestpay/backoffice/LoginGestPay.asp', 'https://ecomm.sella.it/gestpay/backoffice/LoginGestPay.asp') ?></li>
+    		<li><?php echo $this->__("Configure your server's public IP") ?></li>
+    		<li><?php echo $this->__("Configure your server-to-server URL with \"<b>http://www.yourwebsite.com/msp_bancasella/listener/index</b>\"") ?></li>
+    		<li><?php echo $this->__("Configure your positive URL with \"<b>http://www.yourwebsite.com/msp_bancasella/gateway/success</b>\"") ?></li>
+    		<li><?php echo $this->__("Configure your negative URL with \"<b>http://www.yourwebsite.com/msp_bancasella/gateway/failure</b>\"") ?></li>
+    	</ul>
+    </p>
+    <p><a href="<?php echo $this->escapeHtml($this->getUrl('adminhtml/system_config/edit', array('section' => 'payment'))) ?>"><?php echo $this->__('Click here to configure BancaSella payment method.')?></a></p>
+</div>

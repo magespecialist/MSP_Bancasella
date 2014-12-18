@@ -1,0 +1,14 @@
+1.0.0:
+Release version
+
+1.0.1:
+Fixed bug on transaction capture
+
+1.0.2:
+Fixed folder casing
+
+1.0.3:
+Fix potential bug on gateway redirect
+
+1.0.4:
+Minor fixes

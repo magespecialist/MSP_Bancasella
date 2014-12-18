@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <sections>
+    	<payment>
+            <groups>
+                <msp_bancasella_hint>
+                    <frontend_model>msp_bancasella/adminhtml_system_config_fieldset_hint_methods</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </msp_bancasella_hint>
+            </groups>
+        </payment>
+        
+        <msp_bancasella translate="label" module="msp_bancasella">
+            <label>BancaSella - Account Settings</label>
+            <class>msp-bancasella-section</class>
+            <header_css>msp-bancasella-header</header_css>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>350</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+            	<hint>
+                    <frontend_model>msp_bancasella/adminhtml_system_config_fieldset_hint_account</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </hint>
+            	
+            	<account>
+					<label>Account</label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<test-mode translate="label">
+							<label>Test Mode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</test-mode>
+						<language>
+							<label>Language</label>
+							<frontend_type>select</frontend_type>
+							<source_model>msp_bancasella/adminhtml_system_config_source_language</source_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</language>
+						<order-prefix translate="label">
+							<label>Order Prefix</label>
+							<frontend_type>text</frontend_type>
+							<comment>Useful to avoid duplicates on multiple installations</comment>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order-prefix>
+						<merchant translate="label">
+							<label>Merchant code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchant>
+						<login translate="label">
+							<label>Merchant login</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</login>
+						<password translate="label">
+							<label>Merchant password</label>
+							<frontend_type>password</frontend_type>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</password>
+						<currency-code translate="label">
+							<label>Currency Code</label>
+							<frontend_type>select</frontend_type>
+							<source_model>msp_bancasella/adminhtml_system_config_source_uic</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</currency-code>
+						
+						<credits>
+		                    <frontend_model>msp_common/adminhtml_system_config_fieldset_hint_credits</frontend_model>
+		                    <sort_order>999</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+		                </credits>
+					</fields>
+            	</account>
+            	
+            	<fields>
+					<label>Fields configuration</label>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<buyer-name translate="label">
+							<label>Send Customer Name</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment>Must be enabled in your Bancasella account</comment>
+						</buyer-name>
+						<buyer-email>
+							<label>Send Customer Email</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Must be enabled in your Bancasella account</comment>
+						</buyer-email>
+						<language>
+							<label>Send Language</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Must be enabled in your Bancasella account</comment>
+						</language>
+						
+						<credits>
+		                    <frontend_model>msp_common/adminhtml_system_config_fieldset_hint_credits</frontend_model>
+		                    <sort_order>999</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+		                </credits>
+					</fields>
+            	</fields>
+            </groups>
+		</msp_bancasella>
+    	
+		<payment>
+			<groups>
+				<msp_bancasella_gateway translate="label">
+					<label>BancaSella GestPay</label>
+					<sort_order>900</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Active</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </title>
+                        <sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+						<order_status translate="label">
+							<label>New order status</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_order_status_newprocessing</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order_status>
+						<allowspecific translate="label">
+							<label>Payment from applicable countries</label>
+							<frontend_type>allowspecific</frontend_type>
+							<sort_order>40</sort_order>
+							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</allowspecific>
+						<specificcountry translate="label">
+							<label>Payment from Specific countries</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>50</sort_order>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</specificcountry>
+						<payment_action translate="label">
+                            <label>Payment Action</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>paygate/authorizenet_source_paymentAction</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_action>
+                        <min_order_total translate="label">
+                            <label>Minimum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </min_order_total>
+                        <max_order_total translate="label">
+                            <label>Maximum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_order_total>
+                        <credits>
+		                    <frontend_model>msp_common/adminhtml_system_config_fieldset_hint_credits</frontend_model>
+		                    <sort_order>999</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+		                </credits>
+					</fields>
+				</msp_bancasella_gateway>
+			</groups>
+		</payment>
+    </sections>
+</config>

@@ -1,0 +1,34 @@
+<?php
+/**
+ * IDEALIAGroup srl
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@idealiagroup.com so we can send you a copy immediately.
+ *
+ * @category   MSP
+ * @package    MSP_Bancasella
+ * @copyright  Copyright (c) 2013 IDEALIAGroup srl (http://www.idealiagroup.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<div class="page-title">
+    <h1><?php echo $this->__('Redirecting to BancaSella') ?></h1>
+</div>
+
+<div style="text-align: center">
+	<img src="<?php echo $this->getSkinUrl('msp_bancasella/logo.png') ?>">
+	<br />
+	<h2><?php echo $this->__('Please wait while you are beeing redirected to BancaSella payment website...') ?></h2>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+window.location.replace(<?php echo json_encode($this->getRedirectUrl()); ?>);
+//]]>
+</script>
