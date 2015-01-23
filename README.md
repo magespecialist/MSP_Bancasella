@@ -10,3 +10,7 @@ Extension's development is available on github here:
 https://github.com/magespecialist/MSP_Bancasella
 while Magento stable packages are available for free at MageSpecialist website here:  
 http://www.magespecialist.it/en/bancasella-gestpay-payment-gateway.html
+
+## Dependency notice
+Be sure to install MSP_Common magento extension **before** MSP CashOnDelivery or your store could not work properly.
+You can install it via Magento Connect here: http://www.magentocommerce.com/magento-connect/msp-common.html
